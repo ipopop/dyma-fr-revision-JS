@@ -1,0 +1,67 @@
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  background-color: #f7f7f7;
+}
+
+img {
+  max-width: 300px;
+  border-radius: 67% 33% 33% 67% / 67% 67% 33% 33%;
+  box-shadow: 10px 10px 10px #eee, -10px -10px 10px #fff;
+}
+
+#timer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#timer span {
+  font-weight: 800;
+  color: dodgerblue;
+}
+
+h1 {
+  color: dodgerblue;
+}
+
+a {
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(87, 171, 255);
+}
+
+section {
+  margin: 1rem auto;
+  box-shadow:  2px 2px 6px #eee,
+  -10px -10px 20px #ffffff;
+  padding: 1.33rem;
+  /* border: solid 2px #eee; */
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+button {
+  padding: 5px 15px;
+  border: 2px solid #fff;
+  border-radius: .5rem;
+  cursor: pointer;
+  margin: 0 3px;
+  outline: 0;
+  box-shadow:  2px 2px 6px #eee,
+  -10px -10px 20px #ffffff;
+}
+
+button:hover {
+  background-color: #fff;
+  color: dodgerblue;
+  border: 2px solid rgba(238, 238, 238, 0.5);
+  box-shadow: none;
+}
