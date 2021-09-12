@@ -45,10 +45,11 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 
-button {
+button, .btn {
   padding: 5px 15px;
   border: 2px solid #fff;
   border-radius: .5rem;
@@ -59,9 +60,17 @@ button {
   -10px -10px 20px #ffffff;
 }
 
-button:hover {
+button:hover, .btn:hover {
   background-color: #fff;
   color: dodgerblue;
   border: 2px solid rgba(238, 238, 238, 0.5);
   box-shadow: none;
+}
+
+.error {
+  color: red;
+}
+
+#formData {
+  min-width: 67%;
 }

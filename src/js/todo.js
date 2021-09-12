@@ -16,11 +16,11 @@ const todos = [
 ]
 
 form.addEventListener("submit", event => {
-  event.preventDefault();
-  const value = input.value;
-  input.value = "";
+  event.preventDefault()
+  const value = input.value
+  input.value = ""
   addTodo(value)
-});
+})
 
 const displayTodo = () => {
   const todosNode = todos.map((todo, index) => {
@@ -92,9 +92,9 @@ const addTodo = text => {
   todos.push({
     text,
     done: false
-  });
-  displayTodo();
-};
+  })
+  displayTodo()
+}
 
 const deleteTodo = (index) => {
   todos.splice(index, 1)

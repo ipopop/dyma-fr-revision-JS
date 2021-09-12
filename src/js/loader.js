@@ -1,9 +1,9 @@
 'use strict'
 
 function showResult(data) {
-  const h2 = document.createElement("h2")
+  const h3 = document.createElement("h3")
   const ul = document.createElement("ul")
-  h2.innerText = 'fetch data loader :'
+  h3.innerText = 'fetch data loader :'
   data.forEach(d => {
     if (d.id <= 5) {
       const li = document.createElement("li")
@@ -12,7 +12,7 @@ function showResult(data) {
       ul.append(li)
     }
   })
-  document.querySelector("#loader").append(h2, ul)
+  document.querySelector("#loader").append(h3, ul)
 }
 
 async function loadRequest() {

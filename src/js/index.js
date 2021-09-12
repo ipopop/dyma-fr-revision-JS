@@ -36,9 +36,9 @@ const y = JSON.parse(JSON.stringify(z))
 z.name = 'bear'
 z.pseudo.id = 'foot'
 
-console.log('shallow : ', x); // shallow :  { name: 'bar', pseudo: { id: 'foot' } }
-console.log('deep : ', y);    // deep :  { name: 'bar', pseudo: { id: 'foo' } }
-console.log('z : ', z);       // z :  { name: 'bear', pseudo: { id: 'foot' } }
+console.log('shallow : ', x) // shallow :  { name: 'bar', pseudo: { id: 'foot' } }
+console.log('deep : ', y)    // deep :  { name: 'bar', pseudo: { id: 'foo' } }
+console.log('z : ', z)       // z :  { name: 'bear', pseudo: { id: 'foot' } }
 
 
 // ⭐️ les fonctions
@@ -76,10 +76,10 @@ params('zoé') // ZOÉ
 // - Objet arguments et utilisation de l'opérateur Rest -
 
 function calculer(operator, ...number) {
-  let result = 0;
+  let result = 0
   if (operator === '+') {
     for (let i = 0; i < number.length; i++) {
-      result += number[i];
+      result += number[i]
     }
   }
   return result
@@ -125,7 +125,7 @@ console.log('tabz :', tabz)
 
 const copyz = ['a', ...tabz, 'h'] // Array(8) [ "a", "b", "c", "d", "e", "f", "g", "h" ]
 copyz.splice(1, 0, '👋', '👍') // Array(10) [ "a", "👋", "👍", "b", "c", "d", "e", "f", "g", "h" ]
-console.log('copyz :',copyz);
+console.log('copyz :',copyz)
 
 
 // - Supprimer des éléments dans un tableau  -
@@ -148,9 +148,9 @@ console.log(arrz)
 // avec des primitives
 const arrx = [ 'un', 2, 'deux', 'trois']
 
-console.log('indexOf :', arrx.indexOf('2')); // -1
-console.log('indexOf :', arrx[arrx.indexOf('deux')]); // deux
-console.log('includes :', arrx.includes('trois')); // true
+console.log('indexOf :', arrx.indexOf('2')) // -1
+console.log('indexOf :', arrx[arrx.indexOf('deux')]) // deux
+console.log('includes :', arrx.includes('trois')) // true
 
 // avec des objets
 const arrw = [ {name: 'terre'}, {name: 'lune'}, {name: 'soleil'} ]
@@ -167,30 +167,30 @@ console.log('findIndex :', index) // 2
 const arrk = [ 1, 2, 3 ]
 
 const copyk = arrk.slice() // Array(3) [ 1, 2, 3 ]
-console.log('copy with slice :', copyk);
+console.log('copy with slice :', copyk)
 
 const arrk2 = [ 1, { name: 'soleil' }, 3 ]
 
 const copyk2 = arrk2.slice()
 copyk2[1].name = 'lune'
-console.log('original2 :', arrk2[1].name); // lune
-console.log('copy2 with slice :', copyk2[1].name); // lune
+console.log('original2 :', arrk2[1].name) // lune
+console.log('copy2 with slice :', copyk2[1].name) // lune
 
 const copyk3 = [...arrk2]
 copyk3[1].name = 'terre'
-console.log('original3 :', arrk2[1].name); // terre
-console.log('copy3 with spread :', copyk3[1].name); // terre
+console.log('original3 :', arrk2[1].name) // terre
+console.log('copy3 with spread :', copyk3[1].name) // terre
 
 const copyk4 = Array.from(arrk2)
 copyk4[1].name = 'pluton'
-console.log('original4 :', arrk2[1].name); // pluton
-console.log('copy4 with Array.from :', copyk4[1].name); // pluton
+console.log('original4 :', arrk2[1].name) // pluton
+console.log('copy4 with Array.from :', copyk4[1].name) // pluton
 
 // deep (ne fonctionne pas avec des fonctions dans l'objet)
 const copyk5 = JSON.parse(JSON.stringify(arrk2))
 copyk5[1].name = 'neptune'
-console.log('original5 :', arrk2[1].name); // pluton
-console.log('copy5 with JSON :', copyk5[1].name); // neptune
+console.log('original5 :', arrk2[1].name) // pluton
+console.log('copy5 with JSON :', copyk5[1].name) // neptune
 
 // - Fusionner des tableaux -
 
@@ -201,23 +201,23 @@ const cc = [7,8,9]
 const dd = aa.concat(bb).concat(cc) // Array(9) [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 const ee = [...aa, ...bb, ...cc]    // Array(9) [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 
-console.log('fusion with concat :', dd);
-console.log('fusion with spread :', ee);
+console.log('fusion with concat :', dd)
+console.log('fusion with spread :', ee)
 
 // - Trier un tableau -
 
 const ff = [25, 100, 2]
 ff.sort() // Array(3) [ 100, 2, 25 ]
-console.log('ASCII sort :', ff);
+console.log('ASCII sort :', ff)
 
 const gg = ['banana', 'orange', 'ananas']
 gg.sort((u,v) => u.localeCompare(v)) // Array(3) [ "ananas", "banana", "orange" ]
 gg.sort((u,v) => u.localeCompare(v) * -1) // Array(3) [ "orange", "banana", "ananas" ]
-console.log('ASCII sort :', gg);
+console.log('ASCII sort :', gg)
 
 const hh = [ { quantity: 10 }, { quantity: 15 }, { quantity: 5 } ]
 hh.sort((s, t) => s.quantity - t.quantity)
-console.log('num sort :', hh);
+console.log('num sort :', hh)
 /*
 Array(3) [ {…}, {…}, {…} ]
 ​
@@ -230,7 +230,7 @@ Array(3) [ {…}, {…}, {…} ]
 
 const ii = [ 13, 11, 12]
 ii.reverse() // Array(3) [ 12, 11, 13 ]
-console.log('reverse :', ii);
+console.log('reverse :', ii)
 
 // - Itérer sur un tableau -
 
@@ -246,7 +246,7 @@ jj.forEach((el, i) => console.log(`index : ${i} | value : ${el}`))
 
 console.log('for...of')
 for (const val of jj) {
-  console.log(val);
+  console.log(val)
 }
 // 1 2 3 4 5
 
